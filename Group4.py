@@ -19,7 +19,7 @@ area_max = np.pi * (2/2)**2 * 18
 st.sidebar.subheader("Color")
 color = st.sidebar.radio("Input Color", ("Brown", "Green", "Yellow", "Black", "Red"))
 
-@st.cache_data()
+@st.cache()
 def size_report(size):
 	if size < area_min:
 		return "The sample's size indicates a possibility of fibre deficiency, dehydration, or constipation. If you are consuming enough fibre and fluids, please consult a doctor for a more accurate medical diagnosis."
@@ -28,7 +28,7 @@ def size_report(size):
 	else:
 		return "The sample's size indicates no abnormalities. However, you may benefit from consuming more fibre."
 
-@st.cache_data()
+@st.cache()
 def color_report(color):
 	if (color == "Green") or (color == "Yellow"):
 		return "The sample's color indicates that it may be passing through the digestive system too fast. Please consult a doctor for a more accurate medical diagnosis."
