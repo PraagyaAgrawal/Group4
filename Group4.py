@@ -5,6 +5,8 @@ st.set_page_config(page_title = "ACE Toiletz", page_icon = ":poop:", layout = "c
 
 st.title("ACE Toiletz")
 
+st.subheader("User Report")
+
 st.sidebar.title("Input features")
 
 st.sidebar.subheader("Size")
