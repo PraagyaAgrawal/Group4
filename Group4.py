@@ -10,8 +10,8 @@ st.subheader("User Report")
 st.sidebar.title("Input features")
 
 st.sidebar.subheader("Size")
-diameter = st.sidebar.slider("Input Diameter", 	0.1, 3.0)
-length = st.sidebar.slider("Input Length", 5, 20)
+diameter = st.sidebar.slider("Input Diameter (Inches)", 	0.1, 3.0)
+length = st.sidebar.slider("Input Length (Inches)", 5, 20)
 area = np.pi * (diameter/2)**2 * length
 area_min = np.pi * (1/2)**2 * 12
 area_max = np.pi * (2/2)**2 * 18
