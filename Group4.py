@@ -3,7 +3,7 @@ import numpy as np
 
 st.set_page_config(page_title = "ACE Toiletz", page_icon = ":poop:", layout = "centered", initial_sidebar_state = "auto")
 
-st.title("ACE Toiletz")
+st.title("ACE Toilets")
 
 st.subheader("User Report")
 
@@ -23,8 +23,8 @@ elif unit == "cm":
 	diameter = st.sidebar.slider("Input Diameter", 	0.25, 7.5)
 	length = st.sidebar.slider("Input Length", 12.5, 50.0)
 	area = np.pi * (diameter/2)**2 * length
-	area_min = np.pi * (1/2)**2 * 12
-	area_max = np.pi * (2/2)**2 * 18
+	area_min = np.pi * (2.5/2)**2 * 30.5
+	area_max = np.pi * (5/2)**2 * 46
 
 st.sidebar.subheader("Color")
 color = st.sidebar.radio("Input Color", ("Brown", "Green", "Yellow", "Black", "Red"))
