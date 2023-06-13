@@ -10,11 +10,21 @@ st.subheader("User Report")
 st.sidebar.title("Input features")
 
 st.sidebar.subheader("Size")
-diameter = st.sidebar.slider("Input Diameter (Inches)", 	0.1, 3.0)
-length = st.sidebar.slider("Input Length (Inches)", 5, 20)
-area = np.pi * (diameter/2)**2 * length
-area_min = np.pi * (1/2)**2 * 12
-area_max = np.pi * (2/2)**2 * 18
+
+unit = st.sidebar.radio("Choose unit of measurement", ("inches", "cm"))
+
+if unit == "inches":
+	diameter = st.sidebar.slider("Input Diameter", 	0.1, 3.0)
+	length = st.sidebar.slider("Input Length", 5, 20)
+	area = np.pi * (diameter/2)**2 * length
+	area_min = np.pi * (1/2)**2 * 12
+	area_max = np.pi * (2/2)**2 * 18
+elif unit == "cm":
+	diameter = st.sidebar.slider("Input Diameter", 	0.25, 7.5)
+	length = st.sidebar.slider("Input Length", 12.5, 50.0)
+	area = np.pi * (diameter/2)**2 * length
+	area_min = np.pi * (1/2)**2 * 12
+	area_max = np.pi * (2/2)**2 * 18
 
 st.sidebar.subheader("Color")
 color = st.sidebar.radio("Input Color", ("Brown", "Green", "Yellow", "Black", "Red"))
